@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="icon" href="istockphoto-1365135217-612x612-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Rest style.css">
+    <link rel="stylesheet" href="real.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <section class="header fixed-header p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-end">
+                <ul class="nav custom-nav">
+                    <li class="nav-item"><a href="#Home-core" class="nav-link px-2">HOME</a></li>
+                    <li class="nav-item"><a href="#About-core" class="nav-link px-2">ABOUT</a></li>
+                    <li class="nav-item"><a href="#Projects-core" class="nav-link px-2">PROJECTS</a></li>
+                    <li class="nav-item"><a href="#Contact-core" class="nav-link px-2">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const navLinks = document.querySelectorAll('.custom-nav .nav-link');
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
+            });
+        </script>
+    </section>
+    </header>
+
+    <section id="Home-core" class="d-flex justify-content-center align-items-center vh-100">
+        <div id="circle-container" class="position-absolute w-100 h-100"></div>
+        <div class="text-center position-relative">
+            <p class="intro-text">Hi, I'm <span class="name">Nick</span>.</p>
+            <p class="intro-text">I'm a Full Stack Developer.</p>
+            <a href="res2.pdf" target="_blank" class="btn btn-outline-danger">
+                View my Resume
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('circle-container');
+            const numberOfCircles = 100;
+
+            for (let i = 0; i < numberOfCircles; i++) {
+                const circleContainer = document.createElement('div');
+                circleContainer.className = 'circle-container';
+
+                const circle = document.createElement('div');
+                circle.className = 'circle';
+
+                circleContainer.appendChild(circle);
+                container.appendChild(circleContainer);
+            }
+        });
+    </script>
+
+    <section id="About-core">
+        <section class="about" id="about">
+            <h2 class="about__heading">About</h2>
+            <div class="about__content">
+                <div class="profile">
+                    <div class="profile__picture">
+                        <div class="profile-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 16 16"
+                                class="bi bi-person-circle">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#5196e6" />
+                                        <stop offset="50%" style="stop-color:#a064a2" />
+                                        <stop offset="100%" style="stop-color:#ff4d5a" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="profile__blurb">I am a full stack developer with a profound passion for JavaScript, React,
+                        and all facets of web development. The unique blend of creativity, logic, and technology,
+                        coupled with the endless opportunities for discovery, fuels my excitement and enthusiasm for
+                        this field.</p>
+                </div>
+                <div class="skills">
+                    <div class="skills__item"><img src="html.png" alt="HTML">
+                        <div>HTML</div>
+                    </div>
+                    <div class="skills__item"><img src="java.webp" alt="JavaScript">
+                        <div>JAVASCRIPT</div>
+                    </div>
+                    <div class="skills__item"><img src="cs2.png" alt="CSS">
+                        <div>CSS</div>
+                    </div>
+                    <div class="skills__item"><img src="react.png" alt="React">
+                        <div>REACT</div>
+                    </div>
+                    <div class="skills__item">
+                        <alt="">
+                            <div></div>
+                    </div>
+                    <div class="skills__item"><img src="mongodb-icon-1.svg" alt="MongoDB">
+                        <div>MONGODB</div>
+                    </div>
+                    <div class="skills__item"><img src="exp.png" alt="Express.js">
+                        <div>EXPRESS.JS</div>
+                    </div>
+                    <div class="skills__item"><img src="next.jpg" alt="Next.js">
+                        <div>NEXT.JS</div>
+                    </div>
+                    <div class="skills__item"><img src="node js.png" alt="Node.js">
+                        <div>NODE.JS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="projects">
+            <h2 class="section-title" id="Projects-core">Projects</h2>
+            <div class="project-container">
+                <article class="project-item">
+                    <div class="project-text">
+                        <h3 class="project-title"><strong>ZOE</strong></h3>
+                        <p class="project-description">Zodiac calculator for determining astrological signs and
+                            compatibility</p>
+                    </div>
+                    <div class="project-image">
+                        <img src="zoe.jpeg" alt="ZOE Zodiac Calculator Interface" width="500" height="500"
+                            loading="lazy">
+                    </div>
+                </article>
+
+                <article class="project-item reverse">
+                    <div class="project-text">
+                        <h3 class="project-title"><strong>KEEPER APP</strong></h3>
+                        <p class="project-description">Note-taking application for reminders, journal entries, and
+                            personal organization</p>
+                    </div>
+                    <div class="project-image">
+                        <img src="note.webp" alt="Keeper App Interface" width="500" height="500" loading="lazy">
+                    </div>
+                </article>
+
+                <article class="project-item">
+                    <div class="project-text">
+                        <h3 class="project-title"><strong>APEX</strong></h3>
+                        <p class="project-description">Comprehensive project management solution for tracking tasks and
+                            deadlines</p>
+                    </div>
+                    <div class="project-image">
+                        <img src="apex.webp" alt="Apex Project Management Dashboard" width="500" height="500"
+                            loading="lazy">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div id="circle-container"></div>
+
+
+        <section>
+            <h2 class="section-title" id="Projects-core">CONTACTS</h2>
+            <div id="Contact-core">
+                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
+                    action="https://formspree.io/f/{form_id}" method="post">
+                    <fieldset id="fs-frm-inputs">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                        <label for="email-address">Email Address</label>
+                        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld"
+                            required="">
+                        <label for="message">Message</label>
+                        <textarea rows="5" name="message" id="message" placeholder="Any message for me !."
+                            required=""></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                    </fieldset>
+                    <input type="submit" value="Submit" class="submit-2">
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <div class="col-md-4 d-flex align-items-center">
+
+                </footer>
+            </div>
+        </section>
+
+        <div id="Home-core" class="return-home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+              </svg>
+        </div>
+        
+</body>
+
+</html>
